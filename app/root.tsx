@@ -14,10 +14,14 @@ import {
 } from "@remix-run/react";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
+import mainCssUrl from "./styles/main.css";
 import { getUser } from "./session.server";
 
 export const links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
+  return [
+    { rel: "stylesheet", href: tailwindStylesheetUrl },
+    { rel: "stylesheet", href: mainCssUrl },
+  ];
 };
 
 export const meta: MetaFunction = () => ({
@@ -39,7 +43,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function App() {
   return (
     <html lang="en" className="h-full">
-      <head>
+      <head title="Ha Ish">
         <Meta />
         <Links />
       </head>

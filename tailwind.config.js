@@ -8,7 +8,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      serif: ["Miriam Libre"],
+      serif: ["Tinos"],
+      ser: ["Miriam Libre"],
     },
   },
   plugins: [],

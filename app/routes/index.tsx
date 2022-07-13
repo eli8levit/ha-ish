@@ -11,20 +11,21 @@ import TelAviv40 from "~/sources/images/marks/31.jpeg";
 
 export default function Index() {
   return (
-    <main className="relative min-h-screen bg-lime-50 p-20">
-      <div className="m-auto mt-[10vh] grid max-w-[2000px] grid-cols-2  justify-center gap-4">
+    <main className="relative min-h-screen bg-lime-50 bg-grad bg-cover p-20">
+      <div className="m-auto mt-[10vh] grid max-w-[1800px] grid-cols-2  justify-center gap-4">
         <div>
-          <h1 className=" font-serif text-8xl text-primary">
+          <h1 className=" font-serif text-9xl text-primary">
             ה<span className="text-emerald-800">א</span>יש שאוהב את{" "}
             <span className="text-emerald-800">א</span>רצו
           </h1>
-          <p className="mt-3 px-1 font-ser text-2xl text-zinc-700">
-            אראה את פני מאדים, כך או כך, וזו תהיה חוויה נדירה. דומני שהמחזה של
-            הגופים השמיימים מבעד לטלסקופ מדוייק, כמו גם טיול מסביב לעולם, צריכים
-            להיות חלק מחינוך ליברלי.
+          <p className="m-w-[600px] mt-3 px-1 font-ser text-2xl text-gray-800">
+            <strong>למה?</strong> אני מאוד אוהב את המדינה שלנו. אם אני אצליח
+            לתקן ולשפר כאן אפילו כמה דברים קטנים אני ארגיש הרבה יותר טוב עם
+            עצמי. התחלתי להרגיש שאני חייב לספר ולשתף את הדעה שלי כי זה יכול
+            לעזור במטרה שלי.{" "}
           </p>
         </div>
-        <div className="mr-auto grid h-[30vw] w-[34vw]  grid-cols-4 grid-rows-6 justify-center  justify-items-center gap-1 bg-primary p-3">
+        <div className="mr-auto grid h-[30vw] max-h-[650px] w-[34vw] max-w-[700px]  grid-cols-4 grid-rows-6 justify-center  justify-items-center gap-1 bg-primary p-3">
           <img src={BenZviMark} className="row-span-4 h-full object-cover" />
           <img src={AnimalsMark} className=" h-full object-cover" />
           <img src={KnessetMark} className="row-span-2 h-full object-cover" />

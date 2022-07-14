@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#001800",
+        primary: "#000000",
       },
     },
     fontFamily: {
       serif: ["Noto Serif Hebrew"],
-      ser: ["Miriam Libre"],
+      ser: ["Heebo"],
     },
     backgroundImage: {
       grad: "url('../sources/images/grad.png')",
+    },
+    boxShadow: {
+      postHover: "0 0 0 1px black",
+      post: "0 0 0 1px rgba(0,0,0, 0.08)",
     },
   },
   plugins: [],

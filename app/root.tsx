@@ -1,9 +1,4 @@
-import type {
-  LinksFunction,
-  LoaderFunction,
-  MetaFunction,
-} from "@remix-run/node";
-import { json } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -12,15 +7,36 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import AppleIcon from "../public/apple-touch-icon.png";
+import Icon32 from "../public/favicon-32x32.png";
+import Icon16 from "../public/favicon-16x16.png";
+import Manifest from "../public/site.webmanifest";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
-import { getUser } from "./session.server";
 
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: tailwindStylesheetUrl },
     { rel: "stylesheet", href: mainCssUrl },
+    {
+      rel: "icon",
+      sizes: "180x180",
+      href: AppleIcon,
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      href: Icon32,
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      href: Icon16,
+    },
+    { rel: "manifest", href: Manifest },
   ];
 };
 
@@ -29,16 +45,6 @@ export const meta: MetaFunction = () => ({
   title: "האיש",
   viewport: "width=device-width,initial-scale=1",
 });
-
-type LoaderData = {
-  user: Awaited<ReturnType<typeof getUser>>;
-};
-
-export const loader: LoaderFunction = async ({ request }) => {
-  return json<LoaderData>({
-    user: await getUser(request),
-  });
-};
 
 export default function App() {
   return (

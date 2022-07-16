@@ -9,7 +9,8 @@ import Jerusalem from "~/sources/images/marks/40.jpeg";
 import TelAvivUnMark from "~/sources/images/marks/54.jpeg";
 import TelAviv40 from "~/sources/images/marks/31.jpeg";
 import Plant from "~/sources/images/plant.png";
-import { LoaderFunction } from "@remix-run/node";
+import Logo from "~/sources/images/logo.svg";
+import type { LoaderFunction } from "@remix-run/node";
 import { getHebrewDate } from "~/he-date.server";
 import { useLoaderData } from "@remix-run/react";
 
@@ -53,9 +54,12 @@ export default function Index() {
   const hebrewDate = useLoaderData();
   return (
     <main className="relative min-h-screen bg-cover p-28 pb-0 pt-3">
-      <span className="font-ser text-sm font-normal text-gray-800">
-        {hebrewDate}
-      </span>
+      <div className="flex flex-row justify-between">
+        <span className="font-ser text-sm font-normal text-gray-800">
+          {hebrewDate}
+        </span>
+        <img src={Logo} width="70px" />
+      </div>
       <div className="m-auto mt-[10vh] grid max-w-[1800px] grid-cols-2 justify-center gap-4">
         <div>
           <h1 className="font-serif text-9xl font-bold text-primary">

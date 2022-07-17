@@ -58,9 +58,9 @@ export default function Index() {
         <span className="font-ser text-sm font-normal text-gray-800">
           {hebrewDate}
         </span>
-        <img src={Logo} width="70px" />
+        <img src={Logo} width="40px" />
       </div>
-      <div className="m-auto mt-[10vh] grid max-w-[1800px] grid-cols-2 justify-center gap-4">
+      <div className="m-auto mt-[6vh] grid max-w-[1800px] grid-cols-2 justify-center gap-4">
         <div>
           <h1 className="font-serif text-9xl font-bold text-primary">
             ה<span className="text-emerald-800">א</span>יש שאוהב את{" "}

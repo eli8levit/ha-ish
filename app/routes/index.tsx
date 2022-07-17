@@ -38,7 +38,7 @@ const Post = () => {
 const Posts = () => {
   return (
     <section>
-      <h2 className="mb-6 font-serif text-3xl font-normal text-primary">
+      <h2 className="mb-6 font-serif text-3xl font-bold text-primary">
         כתיבה:
       </h2>
       <div className="grid grid-cols-2 gap-8">
@@ -60,17 +60,17 @@ export default function Index() {
         </span>
         <img src={Logo} width="40px" />
       </div>
-      <div className="m-auto mt-[6vh] grid max-w-[1800px] grid-cols-2 justify-center gap-4">
+      <div className="m-auto mt-[6vh] grid max-w-[1700px] grid-cols-2 justify-center gap-4">
         <div>
           <h1 className="font-serif text-9xl font-bold text-primary">
             ה<span className="text-emerald-800">א</span>יש שאוהב את{" "}
             <span className="text-emerald-800">א</span>רצו
           </h1>
-          <p className="m-w-[600px] mt-3 px-1 font-ser text-2xl font-light text-gray-800">
-            <strong className="text-emerald-800">מה זה?</strong> אני מאוד אוהב
-            את המדינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה דברים קטנים זה
-            יעשה לי טוב. פשוט אני מרגיש שאני חייב לספר ולשתף את הדעה שלי כי זה
-            יכול לעזור לי בזה 🇮🇱{" "}
+          <p className="m-w-[600px] mt-16 px-1 font-ser text-2xl font-light leading-10 text-gray-800">
+            <strong className="text-5xl text-emerald-800">מה זה?</strong> אני
+            מאוד אוהב את המדינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה
+            דברים קטנים זה יעשה לי טוב. פשוט אני מרגיש שאני חייב לספר ולשתף את
+            הדעה שלי כי זה יכול לעזור לי בזה 🇮🇱{" "}
           </p>
         </div>
         <div className="mr-auto grid h-[30vw] max-h-[650px] w-[34vw] max-w-[700px]  grid-cols-4 grid-rows-6 justify-center  justify-items-center gap-1 bg-primary p-3">
@@ -98,9 +98,9 @@ export default function Index() {
           />
         </div>
       </div>
-      <div className="m-auto mt-24 mb-14 h-[2px] w-[100%] bg-primary" />
+      <div className="m-auto mt-24 mb-14 h-[1px] w-[100%] max-w-[1700px] bg-primary" />
       <Posts />
-      <img src={Plant} width="250px" className="m-auto mt-24" />
+      <img src={Plant} width="100px" className="m-auto mt-24" />
     </main>
   );
 }

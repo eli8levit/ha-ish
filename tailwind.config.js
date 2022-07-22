@@ -4,19 +4,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
+        primary: "#072308",
       },
-    },
-    fontFamily: {
-      serif: ["Noto Serif Hebrew"],
-      ser: ["Heebo"],
-    },
-    backgroundImage: {
-      grad: "url('../sources/images/grad.png')",
-    },
-    boxShadow: {
-      postHover: "0 0 0 1px black",
-      post: "0 0 0 1px rgba(0,0,0, 0.08)",
+      fontFamily: {
+        serif: ["Noto Serif Hebrew"],
+        ser: ["Heebo"],
+        caravan: ["caravan"],
+        frankRe: ["frank-re"],
+      },
+      backgroundImage: {
+        grad: "url('../sources/images/grad.png')",
+      },
+      boxShadow: {
+        postHover: "0 0 0 2px black",
+        post: "0 0 0 2px rgba(0,0,0, 0.08)",
+      },
+      lineHeight: {
+        10: "3.2rem",
+      },
     },
   },
   plugins: [],

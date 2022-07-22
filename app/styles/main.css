@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+@font-face {
+  font-family: "caravan";
+  src: url("/fonts/caravan-150-aaa.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "frank-re";
+  src: url("/fonts/frank-re-regular-aaa.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 html {
   direction: rtl;
+}
+
+.feat-swsh {
+  font-feature-settings: "swsh";
 }

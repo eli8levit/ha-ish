@@ -8,7 +8,6 @@ import GazellsMark from "~/sources/images/marks/25.jpeg";
 import Jerusalem from "~/sources/images/marks/40.jpeg";
 import TelAvivUnMark from "~/sources/images/marks/54.jpeg";
 import TelAviv40 from "~/sources/images/marks/31.jpeg";
-import Plant from "~/sources/images/plant.png";
 import Logo from "~/sources/images/logo.svg";
 import type { LoaderFunction } from "@remix-run/node";
 import { getHebrewDate } from "~/he-date.server";
@@ -20,16 +19,18 @@ export const loader: LoaderFunction = () => {
 
 const Post = () => {
   return (
-    <div className="shadow px-6  py-8 shadow-post hover:bg-lime-100 hover:shadow-postHover">
-      <h3 className="mb-4 font-serif text-3xl font-bold text-black">
-        תפסיקו להיות בטלפון בנהיגה
+    <div className="px-6 py-8 shadow shadow-post hover:cursor-pointer hover:bg-lime-100 hover:shadow-postHover">
+      <h3 className="mb-4 font-caravan text-3xl text-emerald-900">
+        <span className="text-2xl">♦ </span>תפסיקו להיות בטלפון בנהיגה
       </h3>
-      <p className="mb-4 font-ser text-xl">
-        אינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה דברים קטנים{" "}
+      <p className="mb-4 font-frankRe text-3xl">
+        אינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה דברים קטנים
       </p>
       <div className="flex flex-row items-center">
-        <span className="font-ser text-primary opacity-60">30.06.2022</span>
-        <span className="mr-12">⟵</span>
+        <span className="font-frankRe text-xl text-black opacity-60">
+          30.06.2022
+        </span>
+        <span className="mr-4 font-frankRe text-4xl">☺</span>
       </div>
     </div>
   );
@@ -38,9 +39,7 @@ const Post = () => {
 const Posts = () => {
   return (
     <section>
-      <h2 className="mb-6 font-serif text-3xl font-bold text-primary">
-        כתיבה:
-      </h2>
+      <h2 className="mb-6 font-caravan text-3xl text-primary">⁕ כתיבה:</h2>
       <div className="grid grid-cols-2 gap-8">
         <Post />
         <Post />
@@ -55,25 +54,28 @@ export default function Index() {
   return (
     <main className="relative min-h-screen bg-cover p-28 pb-0 pt-3">
       <div className="flex flex-row justify-between">
-        <span className="font-ser text-sm font-normal text-gray-800">
-          {hebrewDate}
+        <span className="font-frankRe text-lg font-normal text-black">
+          ⁅ {hebrewDate} ⁆
         </span>
         <img src={Logo} width="40px" />
       </div>
       <div className="m-auto mt-[6vh] grid max-w-[1700px] grid-cols-2 justify-center gap-4">
         <div>
-          <h1 className="font-serif text-9xl font-bold text-primary">
-            ה<span className="text-emerald-800">א</span>יש שאוהב את{" "}
-            <span className="text-emerald-800">א</span>רצו
+          <h1 className="font-caravan text-9xl font-black text-primary">
+            ה<span className="text-emerald-800">אִ</span>ישׂ שאוהב את{" "}
+            <span className="text-emerald-800">אִ</span>רצו
           </h1>
-          <p className="m-w-[600px] mt-16 px-1 font-ser text-2xl font-light leading-10 text-gray-800">
-            <strong className="text-5xl text-emerald-800">מה זה?</strong> אני
-            מאוד אוהב את המדינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה
+          <p className="m-w-[700px] row-start-2 mt-16 px-1 font-frankRe text-4xl font-normal  leading-10 text-black">
+            <span className="font-frankRe text-6xl text-emerald-800">
+              מה זה?
+            </span>{" "}
+            אני מאוד אוהב את המדינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה
             דברים קטנים זה יעשה לי טוב. פשוט אני מרגיש שאני חייב לספר ולשתף את
-            הדעה שלי כי זה יכול לעזור לי בזה 🇮🇱{" "}
+            הדעה שלי כי זה יכול לעזור לי בזה{" "}
+            <span className="feat-swsh">ט</span>{" "}
           </p>
         </div>
-        <div className="mr-auto grid h-[30vw] max-h-[650px] w-[34vw] max-w-[700px]  grid-cols-4 grid-rows-6 justify-center  justify-items-center gap-1 bg-primary p-3">
+        <div className="mr-auto grid h-[30vw] max-h-[650px] w-[34vw] max-w-[700px]  grid-cols-4 grid-rows-6 justify-center  justify-items-center gap-1 bg-primary p-4">
           <img src={BenZviMark} className="row-span-4 h-full object-cover" />
           <img src={AnimalsMark} className=" h-full object-cover" />
           <img src={KnessetMark} className="row-span-2 h-full object-cover" />
@@ -100,7 +102,6 @@ export default function Index() {
       </div>
       <div className="m-auto mt-24 mb-14 h-[1px] w-[100%] max-w-[1700px] bg-primary" />
       <Posts />
-      <img src={Plant} width="100px" className="m-auto mt-24" />
     </main>
   );
 }

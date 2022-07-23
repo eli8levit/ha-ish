@@ -14,6 +14,7 @@ import Manifest from "../public/site.webmanifest";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
+import colors from "tailwindcss/colors";
 
 export const links: LinksFunction = () => {
   return [
@@ -44,16 +45,17 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "האיש",
   viewport: "width=device-width,initial-scale=1",
+  "theme-color": colors.lime["50"],
 });
 
 export default function App() {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full bg-lime-50">
       <head title="Ha Ish">
         <Meta />
         <Links />
       </head>
-      <body className="h-full bg-lime-50">
+      <body className="h-full">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

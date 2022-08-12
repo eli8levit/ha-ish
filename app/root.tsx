@@ -50,7 +50,7 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="h-full bg-lime-50">
+    <html lang="en" className="bg-beige">
       <head title="Ha Ish">
         <Meta />
         <Links />

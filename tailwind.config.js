@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{ts,tsx,jsx,js}"],
+  content: ["./app/**/*.{ts,tsx,jsx,js,jpg}"],
   theme: {
     extend: {
       colors: {
-        primary: "#072308",
+        greenPrimary: "#3d863d",
+        greenSecondary: "#113e25",
+        greenLight: "#828200",
+        beige: "#ffffeb",
+        beigeDarker: "#efefd4",
       },
       fontFamily: {
         serif: ["Noto Serif Hebrew"],
@@ -12,21 +16,21 @@ module.exports = {
         caravan: ["caravan"],
         frankRe: ["frank-re"],
       },
-      backgroundImage: {
-        grad: "url('../sources/images/grad.png')",
+      fontSize: {
+        "10xl": "10rem",
       },
       boxShadow: {
         postHover: "0 0 0 2px black",
-        post: "0 0 0 2px rgba(0,0,0, 0.08)",
       },
       lineHeight: {
-        10: "3.2rem",
-        9: "2.9rem",
-        8: "2.5rem",
+        1: 1,
       },
       screens: {
         md: "812px",
         lg: "1200px",
+      },
+      letterSpacing: {
+        50: "50px",
       },
     },
   },

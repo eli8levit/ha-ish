@@ -30,7 +30,7 @@ module.exports = {
         lg: "1200px",
       },
       letterSpacing: {
-        50: "50px",
+        40: "40px",
       },
     },
   },

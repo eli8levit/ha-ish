@@ -8,14 +8,11 @@ import GazellsMark from "~/sources/images/marks/25.jpeg";
 import Jerusalem from "~/sources/images/marks/40.jpeg";
 import TelAvivUnMark from "~/sources/images/marks/54.jpeg";
 import TelAviv40 from "~/sources/images/marks/31.jpeg";
-import Gedi from "~/sources/images/gedi.jpg";
-import Flam from "~/sources/images/flam.jpg";
-import Dead from "~/sources/images/dead.jpg";
-import Rail from "~/sources/images/rail.jpg";
 import Logo from "~/sources/images/logo.svg";
 import type { LoaderFunction } from "@remix-run/node";
 import { getHebrewDate } from "~/he-date.server";
 import { Link, useLoaderData } from "@remix-run/react";
+import { images } from "~/image-stack";
 
 export const loader: LoaderFunction = () => {
   return getHebrewDate();
@@ -23,17 +20,10 @@ export const loader: LoaderFunction = () => {
 
 const posts = [1, 2, 3, 4];
 
-const images = [
-  { src: Gedi, position: "top" },
-  { src: Flam, position: "top" },
-  { src: Dead, position: "top" },
-  { src: Rail, position: "top" },
-];
-
 const Post = ({ index }: { index: number }) => {
   return (
     <Link
-      to="/posts/somepost"
+      to="/posts/1"
       className="bg-beigeDarker hover:cursor-pointer hover:bg-beige hover:shadow-postHover"
     >
       <img

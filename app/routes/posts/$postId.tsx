@@ -1,5 +1,10 @@
 import { useParams } from "react-router";
 import { images } from "~/image-stack";
+import { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => ({
+  "theme-color": "black",
+});
 
 export default function Post() {
   const { postId } = useParams();
@@ -10,15 +15,15 @@ export default function Post() {
       {image ? (
         <img
           src={image.src}
-          className="mx-auto mb-4 h-[400px] w-full object-cover"
+          className="mx-auto mb-4 h-[300px] w-full object-cover md:h-[400px]"
         />
       ) : null}
-      <section className="p-12">
-        <h1 className="font-caravan text-9xl text-greenSecondary">
+      <section className="p-2 md:p-12">
+        <h1 className="font-caravan text-7xl text-greenSecondary md:text-9xl">
           תפסיקו להיות בטלפון בנהיגה
         </h1>
         <div className="mb-14 mt-10 h-[6px] w-[1000px] max-w-full bg-greenSecondary" />
-        <p className="mx-auto max-w-[900px] text-justify font-frankRe text-3xl leading-12 text-black">
+        <p className="mx-auto max-w-[900px] text-justify font-frankRe text-2xl text-black md:text-3xl md:leading-12">
           אחת הבעיות החריפות לדעתי שאנחנו חייבים לטפל - זה נייד בזמן הנהיגה. זה
           לא חדש לאף אחד שהמון נהגים בארץ מחזיקים טלפון ומתעסקים בו בזמן הנהיגה.
           איכהו אנחנו התרגלנו לזה וזה לא מפתיע אותנו כל כך, אבל לא אותי. כל פעם

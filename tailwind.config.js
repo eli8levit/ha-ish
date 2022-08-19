@@ -18,6 +18,7 @@ module.exports = {
       },
       fontSize: {
         "10xl": "10rem",
+        "8half": "5.3rem",
       },
       boxShadow: {
         postHover: "0 0 0 2px black",

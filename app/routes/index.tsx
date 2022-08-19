@@ -13,9 +13,13 @@ import type { LoaderFunction } from "@remix-run/node";
 import { getHebrewDate } from "~/he-date.server";
 import { Link, useLoaderData } from "@remix-run/react";
 import { images } from "~/image-stack";
+import { getPosts } from "~/entry.server";
 
-export const loader: LoaderFunction = () => {
-  return getHebrewDate();
+export const loader: LoaderFunction = async () => {
+  return {
+    hebrewDate: getHebrewDate(),
+    posts: await getPosts(),
+  };
 };
 
 const posts = [1, 2, 3, 4];
@@ -32,7 +36,7 @@ const Post = ({ index }: { index: number }) => {
         className={`h-[200px] w-full object-cover md:h-[300px] object-${images[index].position}`}
       />
       <div className="p-4 md:p-10">
-        <h3 className="mb-4 border-b-2 border-greenSecondary font-caravan text-2xl tracking-wide text-greenSecondary md:w-max">
+        <h3 className="mb-4 border-b-2 border-greenSecondary font-caravan text-2xl tracking-wide text-greenSecondary">
           תפסיקו להיות בטלפון בנהיגה
         </h3>
         <p className="mb-4 font-frankRe text-2xl">
@@ -49,8 +53,8 @@ const Post = ({ index }: { index: number }) => {
 const Posts = () => {
   return (
     <section>
-      <h2 className="mb-14 text-center font-caravan text-3xl tracking-40 text-greenSecondary md:text-4xl">
-        כתיבה:
+      <h2 className="mb-14 text-center font-caravan text-4xl text-greenSecondary md:text-5xl">
+        כתיבה
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {posts.map((post, index) => (
@@ -89,7 +93,7 @@ const Marks = () => (
 );
 
 const Heading = () => (
-  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-8xl font-black leading-1 text-black md:text-center md:text-10xl">
+  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-8half font-black leading-1 text-black md:text-center md:text-10xl">
     ה<span className="text-greenPrimary">אִ</span>ישׂ שאוהב את{" "}
     <span className="text-greenPrimary">אִ</span>רצו
   </h1>
@@ -105,7 +109,8 @@ const Description = () => (
 );
 
 export default function Index() {
-  const hebrewDate = useLoaderData();
+  const { hebrewDate, posts } = useLoaderData();
+  console.log("posts", posts);
   return (
     <main className="relative min-h-screen bg-cover p-2 md:p-8 md:pt-3 lg:p-20 lg:pt-3 2xl:p-28 2xl:pt-3">
       <div className="flex flex-row justify-between">

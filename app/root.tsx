@@ -45,7 +45,7 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "האיש",
   viewport: "width=device-width,initial-scale=1",
-  "theme-color": colors.lime["50"],
+  "theme-color": "#ffffeb",
 });
 
 export default function App() {

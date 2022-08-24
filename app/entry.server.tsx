@@ -22,5 +22,7 @@ export default function handleRequest(
 }
 
 export const getPosts = () => {
-  return prisma.posts.findMany();
+  return prisma.posts.findMany({
+    select: { created_at: true, title: true, id: true },
+  });
 };

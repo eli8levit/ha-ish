@@ -1,21 +1,18 @@
-# fly.toml file generated for ha-ish on 2022-08-24T22:22:19+03:00
+# fly.toml file generated for ha-ish on 2022-08-24T22:55:21+03:00
 
 app = "ha-ish"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
+[env]
+
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
-  cmd = "start.sh"
-  entrypoint = "sh"
-
-[mounts]
-  destination = "/data"
-  source = "data"
 
 [[services]]
+  http_checks = []
   internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
@@ -24,16 +21,6 @@ processes = []
     hard_limit = 25
     soft_limit = 20
     type = "connections"
-
-  [[services.http_checks]]
-    grace_period = "5s"
-    interval = "10s"
-    method = "get"
-    path = "/healthcheck"
-    protocol = "http"
-    timeout = "2s"
-    tls_skip_verify = false
-    [services.http_checks.headers]
 
   [[services.ports]]
     force_https = true

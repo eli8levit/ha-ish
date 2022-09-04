@@ -46,8 +46,8 @@ interface Props {
 export const PostCards = ({ posts = [] }: Props) => {
   console.log("possts", posts);
   return (
-    <section>
-      <h2 className="mb-14 text-center font-caravan text-4xl text-greenSecondary md:text-5xl">
+    <section className="mx-auto max-w-[1800px]">
+      <h2 className="mb-14  text-center font-caravan text-4xl text-greenSecondary md:text-5xl">
         כתיבה
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

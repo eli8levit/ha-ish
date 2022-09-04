@@ -14,7 +14,6 @@ import Manifest from "../public/site.webmanifest";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
-import colors from "tailwindcss/colors";
 
 export const links: LinksFunction = () => {
   return [

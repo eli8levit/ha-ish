@@ -2,9 +2,9 @@ import Logo from "~/sources/images/logo.svg";
 import type { LoaderFunction } from "@remix-run/node";
 import { getHebrewDate } from "~/he-date.server";
 import { useLoaderData } from "@remix-run/react";
-import { getPosts } from "~/entry.server";
 import { PostCards } from "~/post-cards";
 import { Marks } from "~/marks";
+import { getPosts } from "~/models/posts";
 
 export const loader: LoaderFunction = async () => {
   return {
@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async () => {
 };
 
 const Heading = () => (
-  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-8half font-black leading-1 text-black md:text-center md:text-10xl">
+  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-8xl font-black leading-1 text-black md:text-center md:text-10xl">
     ה<span className="text-greenPrimary">אִ</span>ישׂ שאוהב את{" "}
     <span className="text-greenPrimary">אִ</span>רצו
   </h1>
@@ -31,12 +31,11 @@ const Description = () => (
 
 export default function Index() {
   const { hebrewDate, posts } = useLoaderData();
-  console.log("posts", posts);
   return (
     <main className="relative min-h-screen bg-cover p-2 md:p-8 md:pt-3 lg:p-20 lg:pt-3 2xl:p-28 2xl:pt-3">
       <div className="flex flex-row justify-between">
         <span className="font-frankRe text-lg font-normal text-black">
-          ⁅ {hebrewDate} ⁆
+          {hebrewDate}
         </span>
         <img src={Logo} width="40px" />
       </div>

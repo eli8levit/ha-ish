@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./app/**/*.{ts,tsx,jsx,js,jpg}"],
   theme: {
@@ -6,19 +8,15 @@ module.exports = {
       colors: {
         greenPrimary: "#3d863d",
         greenSecondary: "#113e25",
-        greenLight: "#828200",
         beige: "#ffffeb",
         beigeDarker: "#efefd4",
       },
       fontFamily: {
-        serif: ["Noto Serif Hebrew"],
-        ser: ["Heebo"],
-        caravan: ["caravan"],
-        frankRe: ["frank-re"],
+        caravan: ["caravan", ...defaultTheme.fontFamily.serif],
+        frankRe: ["frank-re", ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
         "10xl": "10rem",
-        "8half": "5.3rem",
       },
       boxShadow: {
         postHover: "0 0 0 2px black",
@@ -36,5 +34,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("paragraph", "& > p");
+    },
+  ],
 };

@@ -16,6 +16,7 @@ module.exports = {
         frankRe: ["frank-re", ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
+        "7.5xl": "5rem",
         "10xl": "10rem",
       },
       boxShadow: {
@@ -26,7 +27,6 @@ module.exports = {
         12: 1.4,
       },
       screens: {
-        md: "812px",
         lg: "1200px",
       },
       letterSpacing: {

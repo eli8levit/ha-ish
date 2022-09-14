@@ -14,7 +14,7 @@ export const loader: LoaderFunction = async () => {
 };
 
 const Heading = () => (
-  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-8xl font-black leading-1 text-black md:text-center md:text-10xl">
+  <h1 className="mt-[8vh] mb-[12vh] font-caravan text-7.5xl font-black leading-1 text-black sm:text-8xl md:text-center md:text-10xl ">
     ה<span className="text-greenPrimary">אִ</span>ישׂ שאוהב את{" "}
     <span className="text-greenPrimary">אִ</span>רצו
   </h1>

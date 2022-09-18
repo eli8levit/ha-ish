@@ -27,7 +27,7 @@ const Card = ({ post }: { post: Post }) => {
         <h3 className="mb-4 border-b-2 border-greenSecondary font-caravan text-2xl tracking-wide text-greenSecondary">
           {post.title}
         </h3>
-        <p className="mb-4 font-frankRe text-2xl">
+        <p className="mb-4 font-frankRe text-2.5xl">
           אינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה דברים קטנים
         </p>
         <span className="font-caravan text-base tracking-wider text-greenSecondary">

@@ -16,6 +16,7 @@ module.exports = {
         frankRe: ["frank-re", ...defaultTheme.fontFamily.serif],
       },
       fontSize: {
+        "2.5xl": "1.6rem",
         "7.5xl": "5rem",
         "10xl": "10rem",
       },

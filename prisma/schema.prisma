@@ -14,7 +14,7 @@ model Posts {
   id         Int      @id @default(autoincrement())
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
-  content    String   @default("")
+  content    String   @db.Text
   title      String   @unique @db.VarChar(255)
   description String  @default("")
 }

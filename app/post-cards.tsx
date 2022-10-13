@@ -30,9 +30,6 @@ const Card = ({ post }: { post: Post }) => {
         <p className="mb-4 font-frankRe text-2.5xl">
           אינה שלנו. אם אני אצליח לתקן ולשפר כאן אפילו כמה דברים קטנים
         </p>
-        <span className="font-caravan text-base tracking-wider text-greenSecondary">
-          {post.created_at}
-        </span>
       </div>
     </Link>
   );
@@ -45,7 +42,7 @@ interface Props {
 export const PostCards = ({ posts = [] }: Props) => {
   return (
     <section className="mx-auto max-w-[1800px]">
-      <h2 className="mb-14  text-center font-caravan text-4xl text-greenSecondary md:text-5xl">
+      <h2 className="mb-14 text-center font-caravan text-4xl text-black md:text-5xl">
         כתיבה
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

@@ -32,20 +32,33 @@ const Description = () => (
 export default function Index() {
   const { hebrewDate, posts } = useLoaderData();
   return (
-    <main className="relative min-h-screen bg-cover p-2 md:p-8 md:pt-3 lg:p-20 lg:pt-3 2xl:p-28 2xl:pt-3">
-      <div className="flex flex-row justify-between">
-        <span className="font-frankRe text-lg font-normal text-black">
-          {hebrewDate}
-        </span>
-        <img src={Logo} width="40px" />
+    <div>
+      <div className="relative min-h-screen bg-cover p-2 pb-0 md:p-8 md:pt-3 md:pb-0 lg:p-20 lg:pt-3 lg:pb-0 2xl:p-28 2xl:pt-3">
+        <div className="flex flex-row justify-between">
+          <span className="font-frankRe text-lg font-normal text-black">
+            {hebrewDate}
+          </span>
+          <img src={Logo} width="40px" />
+        </div>
+        <Heading />
+        <main className="mx-auto grid max-w-[1500px] grid-cols-1 grid-rows-2 content-center items-center gap-12 md:grid-cols-2 md:grid-rows-1">
+          <Description />
+          <Marks />
+        </main>
+        <div className="m-auto mt-12 mb-14 h-[1px] w-[100%] max-w-[1700px] bg-black md:mt-24" />
+        <PostCards posts={posts} />
       </div>
-      <Heading />
-      <div className="mx-auto grid max-w-[1500px] grid-cols-1 grid-rows-2 content-center items-center gap-12 md:grid-cols-2 md:grid-rows-1">
-        <Description />
-        <Marks />
-      </div>
-      <div className="m-auto mt-12 mb-14 h-[1px] w-[100%] max-w-[1700px] bg-black md:mt-24" />
-      <PostCards posts={posts} />
-    </main>
+      <footer className="mt-20 flex h-9 items-center justify-end gap-x-5 bg-black px-6 py-2 font-frankRe">
+        <a
+          href="https://twitter.com/ha_ish_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-center text-white underline hover:text-blue-500"
+        >
+          Twitter
+        </a>
+        <span className="text-white">2022</span>
+      </footer>
+    </div>
   );
 }

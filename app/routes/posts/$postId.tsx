@@ -41,7 +41,7 @@ export default function Post() {
         </h1>
         <div className="mb-14 h-[6px] w-[1000px] max-w-full bg-greenPrimary" />
         <div
-          className="mx-auto max-w-[900px] text-justify font-frankRe text-2xl text-black paragraph:my-12 md:text-4xl md:leading-12"
+          className="mx-auto max-w-[900px] text-justify font-frankRe text-2xl text-black paragraph:my-12 md:text-3xl md:leading-12"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </section>

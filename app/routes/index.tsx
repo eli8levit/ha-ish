@@ -49,7 +49,7 @@ export default function Index() {
           <Description />
           <Marks />
         </main>
-        <div className="m-auto mt-12 mb-14 h-[1px] w-[100%] max-w-[1700px] bg-black md:mt-24" />
+        <div className="m-auto mt-12 mb-14 h-[2px] w-[100%] max-w-[1700px] bg-greenPrimary md:mt-24" />
         <PostCards posts={posts} />
       </div>
       <footer className="mt-20 flex h-9 items-center justify-end gap-x-5 bg-beigeDarker px-6 py-2 font-frankRe">

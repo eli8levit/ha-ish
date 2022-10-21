@@ -25,7 +25,7 @@ module.exports = {
       },
       lineHeight: {
         1: 1,
-        12: 1.2,
+        12: 1.3,
       },
       screens: {
         lg: "1200px",

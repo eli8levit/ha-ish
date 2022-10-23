@@ -35,6 +35,25 @@ export default function Post() {
           alt={image.alt}
         />
       ) : null}
+      <div className="flex">
+        <a
+          href="/#blog"
+          className="group mr-auto block flex items-center font-frankRe text-3xl text-greenSecondary hover:text-greenPrimary active:text-greenSecondary"
+        >
+          <span className="ml-2 ">חזרה</span>
+          <svg
+            className="stroke-greenSecondary group-hover:stroke-greenPrimary group-active:stroke-greenSecondary"
+            width="87"
+            height="39"
+            viewBox="0 0 87 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M4 19H87" stroke-width="6" />
+            <path d="M14 2.5L4 19L14 37" stroke-width="6" />
+          </svg>
+        </a>
+      </div>
       <section className="p-2 md:p-12">
         <h1 className="font-caravan text-7xl text-greenSecondary md:text-9xl">
           {post?.title}

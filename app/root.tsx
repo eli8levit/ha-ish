@@ -15,7 +15,6 @@ import MetaCard from "../public/meta.png";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
-import { commonMetaTags } from "~/utils";
 
 export const links: LinksFunction = () => {
   return [
@@ -43,15 +42,17 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => ({
-  ...commonMetaTags,
+  "theme-color": "#ffffeb",
   title: "האיש שאוהב את ארצו",
   description: "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
   "og:title": "האיש שאוהב את ארצו",
   "og:description": "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
   "og:image": MetaCard,
+  "twitter:card": "summary_large_image",
   "twitter:title": "האיש שאוהב את ארצו",
   "twitter:description": "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
   "twitter:image": MetaCard,
+  viewport: "width=device-width,initial-scale=1",
 });
 
 export default function App() {

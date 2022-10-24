@@ -6,9 +6,20 @@ import { getPost } from "~/models/posts";
 import { useLoaderData } from "@remix-run/react";
 import type { SinglePost } from "~/types";
 
-export const meta: MetaFunction = () => ({
-  "theme-color": "black",
-});
+export const meta: MetaFunction = ({ params, data }) => {
+  return {
+    "theme-color": "black",
+    title: data.post.title,
+    description: data.post.description,
+    "og:title": data.post.title,
+    "og:description": data.post.description,
+    "og:image": images[Number(params.postId)],
+    "twitter:card": "summary_large_image",
+    "twitter:title": data.post.title,
+    "twitter:description": data.post.description,
+    "twitter:image": images[Number(params.postId)],
+  };
+};
 
 type LoaderData = {
   post: SinglePost | null;
@@ -48,7 +59,7 @@ export default function Post() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M4 19h83M14 2.5 4 19l10 18" stroke-width="6" />
+            <path d="M4 19h83M14 2.5 4 19l10 18" strokeWidth="6" />
           </svg>
         </a>
       </div>

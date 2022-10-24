@@ -11,9 +11,11 @@ import AppleIcon from "../public/apple-touch-icon.png";
 import Icon32 from "../public/favicon-32x32.png";
 import Icon16 from "../public/favicon-16x16.png";
 import Manifest from "../public/site.webmanifest";
+import MetaCard from "../public/meta.png";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
+import { commonMetaTags } from "~/utils";
 
 export const links: LinksFunction = () => {
   return [
@@ -41,16 +43,21 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "האיש",
-  viewport: "width=device-width,initial-scale=1",
-  "theme-color": "#ffffeb",
+  ...commonMetaTags,
+  title: "האיש שאוהב את ארצו",
+  description: "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
+  "og:title": "האיש שאוהב את ארצו",
+  "og:description": "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
+  "og:image": MetaCard,
+  "twitter:title": "האיש שאוהב את ארצו",
+  "twitter:description": "בלוג של ישראלי שאוהב את ארץ ומנסה לשפר אותה",
+  "twitter:image": MetaCard,
 });
 
 export default function App() {
   return (
-    <html lang="en" className="bg-beige">
-      <head title="Ha Ish">
+    <html lang="he" className="bg-beige">
+      <head title="האיש שאוהב את ארצו">
         <Meta />
         <Links />
       </head>

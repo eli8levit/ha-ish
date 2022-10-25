@@ -40,11 +40,11 @@ export default function Index() {
         <nav className="flex gap-x-4">
           <a
             href="/#blog"
-            className="flex items-center gap-x-0.5  font-caravan text-base text-zinc-900"
+            className="flex items-center gap-x-0.5 font-caravan text-lg text-zinc-900"
           >
             <svg
-              width="15"
-              height="15"
+              width="20"
+              height="20"
               viewBox="0 0 1000 1000"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +60,11 @@ export default function Index() {
           </a>
           <a
             href="/#blog"
-            className="flex items-center gap-x-0.5  font-caravan text-base text-zinc-900"
+            className="flex items-center gap-x-0.5 font-caravan text-lg text-zinc-900"
           >
             <svg
-              width="15"
-              height="15"
+              width="20"
+              height="20"
               viewBox="0 0 1000 1000"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

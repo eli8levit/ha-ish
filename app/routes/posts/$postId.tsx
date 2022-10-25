@@ -9,15 +9,15 @@ import type { SinglePost } from "~/types";
 export const meta: MetaFunction = ({ params, data }) => {
   return {
     "theme-color": "black",
-    title: data.post.title,
+    title: `${data.post.title} - האיש`,
     description: data.post.description,
     "og:title": data.post.title,
     "og:description": data.post.description,
-    "og:image": images[Number(params.postId)],
+    "og:image": images[Number(params.postId)].src,
     "twitter:card": "summary_large_image",
     "twitter:title": data.post.title,
     "twitter:description": data.post.description,
-    "twitter:image": images[Number(params.postId)],
+    "twitter:image": images[Number(params.postId)].src,
   };
 };
 

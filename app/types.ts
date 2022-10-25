@@ -5,4 +5,5 @@ export type SinglePost = {
   content?: string;
   slug?: string;
   title: string;
+  description: string;
 };

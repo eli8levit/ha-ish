@@ -1,5 +1,5 @@
 import Gedi from "~/sources/images/gedi.jpg";
-import Flam from "~/sources/images/flam.jpg";
+import Flam from "~/sources/images/flam.jpeg";
 import Dead from "~/sources/images/dead.jpg";
 import Rail from "~/sources/images/rail.jpg";
 

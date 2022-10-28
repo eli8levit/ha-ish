@@ -33,7 +33,7 @@ export default function Index() {
   const { hebrewDate, posts } = useLoaderData();
   return (
     <div>
-      <header className="flex flex-row flex-row-reverse flex-wrap-reverse items-center justify-end gap-x-8 bg-beigeDarker py-2 px-4">
+      <header className="flex flex-row flex-row-reverse flex-wrap-reverse items-center justify-end gap-x-4 bg-beigeDarker py-2 px-4">
         <span className="ml-10 font-frankRe text-sm font-normal text-black">
           {hebrewDate}
         </span>
@@ -42,44 +42,12 @@ export default function Index() {
             href="/#blog"
             className="flex items-center gap-x-0.5 font-caravan text-lg text-zinc-900"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 1000 1000"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 0H1000V419.387V1000H0V0Z" fill="black" />
-              <path d="M211 152H251V847H211V152Z" fill="#38E5B7" />
-              <path
-                d="M317 457V332H688.017C695.376 332 702.745 332.278 709.684 334.728C715.762 336.874 723.53 340.611 730.5 347C742.5 358 742.5 376 742.5 376V540.5H789.5V668H317V540.5H604V457H317Z"
-                fill="#38E5B7"
-              />
-            </svg>
             <span className="tracking-widest opacity-90">כתיבה</span>
           </a>
           <a
             href="/#blog"
             className="flex items-center gap-x-0.5 font-caravan text-lg text-zinc-900"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 1000 1000"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 0H1000V419.387V1000H0V0Z" fill="black" />
-              <path
-                d="M662.846 341.385H177V712.835H823V341.385H788.457M662.846 341.385V288H788.457V341.385M662.846 341.385H788.457"
-                stroke="#38E5B7"
-                strokeWidth="40"
-              />
-              <circle cx="499.583" cy="523.583" r="134.583" fill="#38E5B7" />
-              <circle cx="500" cy="524" r="100" fill="#1E7C63" />
-              <circle cx="500" cy="524" r="75" fill="#051511" />
-            </svg>
-
             <span className="tracking-widest opacity-90">חנות</span>
           </a>
         </nav>

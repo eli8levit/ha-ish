@@ -3,7 +3,7 @@ import { prisma } from "~/db.server";
 export const getPosts = () => {
   return prisma.posts
     .findMany({
-      select: { created_at: true, title: true, id: true },
+      select: { created_at: true, title: true, id: true, description: true },
     })
     .then((posts) =>
       posts.map((post) => ({

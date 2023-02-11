@@ -19,11 +19,14 @@ const Card = ({ post }: { post: SinglePost }) => {
         className={`h-[200px] w-full object-cover md:h-[300px] object-${image.position}`}
         alt={image.alt}
       />
-      <div className="p-4 md:p-10">
+      <div className="p-4 md:p-6">
         <h3 className="mb-4 border-b-2 border-greenPrimary font-caravan text-2xl tracking-wide text-greenSecondary">
           {post.title}
         </h3>
         <p className="mb-4 font-frankRe text-2.5xl">{post.description}</p>
+        <span className="mt-auto font-frankRe text-lg font-bold text-greenSecondary 2xl:text-xl">
+          {new Date(post.created_at).toLocaleDateString()}
+        </span>
       </div>
     </Link>
   );

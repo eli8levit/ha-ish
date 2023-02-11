@@ -15,6 +15,7 @@ import MetaCard from "../public/meta.png";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import mainCssUrl from "./styles/main.css";
+import { Header } from "~/components/header";
 
 export const links: LinksFunction = () => {
   return [
@@ -63,6 +64,7 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

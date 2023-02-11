@@ -40,11 +40,9 @@ export default function Post() {
   return (
     <div>
       {image ? (
-        <img
-          src={image.src}
-          className="mx-auto mb-4 h-[300px] w-full object-cover md:h-[400px]"
-          alt={image.alt}
-        />
+        <div
+          className={`h-[400px] w-full bg-[url('/57.jpeg')] bg-[length:300px] bg-repeat`}
+        ></div>
       ) : null}
       <div className="flex">
         <a

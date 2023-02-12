@@ -5,7 +5,7 @@ const linkDefaultClassName =
 
 export const Header = () => {
   return (
-    <div className="sticky top-0 z-20 -mb-20">
+    <div className="sticky top-0 z-20 md:-mb-20">
       <header className="flex w-full flex-row flex-row-reverse flex-wrap-reverse items-center justify-end gap-x-4 py-2 px-4 backdrop-blur-sm">
         <nav className="flex gap-x-4 md:mt-3 md:mr-5 ">
           <NavLink

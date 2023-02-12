@@ -72,8 +72,8 @@ export const Header = () => {
               y2="310"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset=".613" stop-color="#44FFBC" />
-              <stop offset="1" stop-color="#22C2AF" />
+              <stop offset=".613" stopColor="#44FFBC" />
+              <stop offset="1" stopColor="#22C2AF" />
             </linearGradient>
             <linearGradient
               id="b"
@@ -83,8 +83,8 @@ export const Header = () => {
               y2="615.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset=".441" stop-color="#00E075" />
-              <stop offset="1" stop-color="#01542C" />
+              <stop offset=".441" stopColor="#00E075" />
+              <stop offset="1" stopColor="#01542C" />
             </linearGradient>
           </defs>
         </svg>

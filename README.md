@@ -1,4 +1,4 @@
 # ha-ish
 ## Site who loved Israel (and knows Hebrew 🤫)
 
-https://ha-ish.com/meta.png
+![Logo in form of Israel with 2 Alef letters](https://ha-ish.com/meta.png)
